@@ -25,7 +25,7 @@ $logged_in = isset($_SESSION['user_id']);
             <div class="center-links">
                 <li><a href="../index.php">Início</a></li>
                 <li><a href="../paginas/sobreNos.html">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="../paginas/contato">Contato</a></li>
                 <li><a href="carrinho.php">Carrinho</a></li>
             </div>
             <?php if ($logged_in): ?>

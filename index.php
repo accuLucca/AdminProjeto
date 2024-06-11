@@ -25,7 +25,7 @@ $username = $logged_in ? $_SESSION['username'] : '';
             <div class="center-links">
                 <li><a href="#">Início</a></li>
                 <li><a href="paginas/sobrenos.html">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="paginas/contato.html">Contato</a></li>
                 <li><a href="paginas/carrinho.php">Carrinho</a></li>
             </div>
             <?php if ($logged_in): ?>
