@@ -14,7 +14,7 @@ function finalizarCompra(metodo) {
                 <input type="text" id="validadeCartao" name="validadeCartao" required>
                 <label for="cvvCartao">CVV:</label>
                 <input type="text" id="cvvCartao" name="cvvCartao" required>
-                <button type="submit">Pagar</button>
+                <button onclick="confirmarPagamento()">Confirmar Pagamento</button>
             </form>
         `;
     } else if (metodo === 'pix') {
