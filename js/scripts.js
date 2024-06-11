@@ -101,11 +101,9 @@ function signupCarrinho(event) {
 }
 
 // Carrinho de compra
-// Get modal elements
 var modal = document.getElementById("productModal");
 var span = document.getElementsByClassName("close")[0];
 
-// Function to open modal when button is clicked
 function openModal(product) {
     var modalProductImage = document.getElementById("modalProductImage");
     var modalProductName = document.getElementById("modalProductName");
@@ -121,24 +119,20 @@ function openModal(product) {
     }
 }
 
-// Close modal when the close button is clicked
 span.onclick = function() {
     modal.style.display = "none";
 }
 
-// Close modal when user clicks outside of it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
-// Add product to cart
 document.getElementById("addToCartButton").onclick = function() {
     var productName = document.getElementById("modalProductName").innerText;
     var productPrice = document.getElementById("modalProductPrice").innerText.replace('R$', '');
 
-    // Make AJAX request to add product to cart
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "php/addCarrinho.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

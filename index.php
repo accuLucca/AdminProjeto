@@ -11,7 +11,7 @@ $username = $logged_in ? $_SESSION['username'] : '';
     <title>Drop China</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/carrinho.css"> <!-- Link para o CSS do carrinho -->
+    <link rel="stylesheet" href="css/carrinho.css">
 </head>
 <body>
     <header>
