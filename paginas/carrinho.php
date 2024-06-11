@@ -78,6 +78,7 @@ $logged_in = isset($_SESSION['user_id']);
                     $stmt->bind_param("i", $user_id);
                     $stmt->execute();
                     $result = $stmt->get_result();
+                    $total = 0;
                     ?>
                     <h1><?php echo htmlspecialchars($_SESSION['username']); ?>, seu carrinho atual</h1>
 
@@ -98,9 +99,26 @@ $logged_in = isset($_SESSION['user_id']);
                                         </td>
                                         <td>R$ <?php echo number_format($row['product_price'], 2, ',', '.'); ?></td>
                                     </tr>
+                                    <?php $total += $row['product_price']; ?>
                                 <?php endwhile; ?>
                             </tbody>
                         </table>
+                        <h3>Valor Total: R$ <?php echo number_format($total, 2, ',', '.'); ?></h3>
+
+                        <div class="pagamento">
+                            <h2>Formas de Pagamento</h2>
+                            <button id="pagamento-cartao" onclick="finalizarCompra('cartao')">Cartão de Crédito</button>
+                            <button id="pagamento-pix" onclick="finalizarCompra('pix')">PIX</button>
+                        </div>
+
+                        <!-- Modal para pagamento -->
+                        <div id="modalPagamento" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div id="conteudoPagamento"></div>
+                            </div>
+                        </div>
+
                     <?php else: ?>
                         <p>Seu carrinho está vazio.</p>
                     <?php endif; ?>
@@ -118,5 +136,6 @@ $logged_in = isset($_SESSION['user_id']);
     </footer>
 
     <script src="../js/scripts.js"></script>
+    <script src="../js/finalizarCompra.js"></script>
 </body>
 </html>
