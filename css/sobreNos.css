@@ -70,6 +70,7 @@ nav a {
 }
 
 .sobre-nos {
+    min-height: 75vh;
     padding: 20px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
