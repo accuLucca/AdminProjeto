@@ -1,4 +1,5 @@
 /* Estilos para o carrinho de compras */
+
 .carrinho {
     padding: 20px;
 }
@@ -10,6 +11,7 @@
 }
 
 .carrinho-container {
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,4 +93,11 @@ table img {
 
 #conteudoPagamento {
     margin-top: 20px;
+}
+
+footer {
+    min-height: 50px;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
 }
