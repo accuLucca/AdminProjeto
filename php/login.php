@@ -19,11 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_id'] = $id;
                 $_SESSION['username'] = $nome;
                 $_SESSION['is_admin'] = $is_admin;
-                if ($is_admin) {
-                    echo "/AdminProjeto/paginas/admin.php";
-                } else {
-                    echo "/AdminProjeto/index.php";
-                }
+                echo "/AdminProjeto/index.php";
+                
             } else {
                 echo "Senha incorreta.";
             }
