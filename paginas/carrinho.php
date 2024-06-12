@@ -29,6 +29,9 @@ $logged_in = isset($_SESSION['user_id']);
                 <li><a href="carrinho.php">Carrinho</a></li>
             </div>
             <?php if ($logged_in): ?>
+                <?php if ($_SESSION ['is_admin']): ?>
+                    <li class="right-links"><a href="paginas/admin.php">Pagina Admin</a></li>
+                <?php endif; ?>
                 <li class="right-links"><a href="#"><?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
                 <li class="right-links"><a href="../php/logout.php" onclick="return confirm('Tem certeza que deseja sair?');">Logout</a></li>
             <?php else: ?>

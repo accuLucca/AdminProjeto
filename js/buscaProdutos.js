@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 productGrid.appendChild(productCard);
             });
 
-            // Add event listeners to the "Adicionar ao Carrinho" buttons
+            // Botao "Adicionar ao Carrinho"
             const addToCartButtons = document.querySelectorAll('.comprar');
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', function() {

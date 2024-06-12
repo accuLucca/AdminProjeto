@@ -73,7 +73,7 @@ $username = $logged_in ? $_SESSION['username'] : '';
         </section>
     </main>
 
-    <!-- Modal HTML -->
+    <!-- Modal add carrinho -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
